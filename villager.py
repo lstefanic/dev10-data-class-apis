@@ -23,6 +23,11 @@ def createVillager(villager_dict):
     catch_phrase = villager_dict["catch-phrase"]
     return Villager(id,name,personality,birthday,birthday_string,species,gender,catch_phrase)
 
-response = requests.get("http://acnhapi.com/v1/villagers/hip00")
+def createVillagers(villagers_dict):
+    return map(createVillager,list(villagers_dict.values()))
+
+response = requests.get("http://acnhapi.com/v1/villagers")
 print(response.status_code)
-print(createVillager(response.json()))
+villagers = createVillagers(response.json())
+for villager in villagers:
+    print(villager)

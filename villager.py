@@ -12,6 +12,14 @@ class Villager:
     gender: str
     catch_phrase: str
 
+    def __str__(self):
+        result = ""
+        result += "%s: %s, %s\n" % (self.name["name-USen"], self.species, self.gender)
+        result += "Born on %s\n" % self.birthday_string
+        result += "%s\n" % self.personality
+        result += "Catchphrase: \"%s\"\n" % self.catch_phrase
+        return result
+
 def createVillager(villager_dict):
     id = villager_dict["id"]
     name = villager_dict["name"]

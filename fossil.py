@@ -7,6 +7,13 @@ class Fossil:
     price: int
     museum_phrase: str
 
+    def __str__(self):
+        result = ""
+        result += "%s\n" % self.name["name-USen"]
+        result += "Buy for %u\n" % self.price
+        result += "%s\n" % self.museum_phrase
+        return result
+
 def createFossil(fossil_dict):
     name = fossil_dict["name"]
     price = fossil_dict["price"]

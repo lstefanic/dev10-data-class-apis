@@ -12,6 +12,13 @@ class Sea_Creature:
     catch_phrase: str
     museum_phrase: str
 
+    def __str__(self):
+        result = ""
+        result += "%s: \"%s\"\n" % (self.name["name-USen"], self.catch_phrase)
+        result += "Buy for %u\n" % self.price
+        result += "%s\n" % self.museum_phrase
+        return result
+
 def createSeaCreature(creature_dict):
     id = creature_dict["id"]
     name = creature_dict["name"]

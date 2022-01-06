@@ -1,4 +1,5 @@
 from dataclasses import dataclass, field
+import requests
 
 @dataclass
 class Fish:
@@ -10,6 +11,13 @@ class Fish:
     price_cj: int
     catch_phrase: str
     museum_phrase: str
+
+    def __str__(self):
+        result = ""
+        result += "%s: \"%s\"\n" % (self.name["name-USen"], self.catch_phrase)
+        result += "Buy for %u, or buy from CJ for %u\n" % (self.price, self.price_cj)
+        result += "%s\n" % self.museum_phrase
+        return result
 
 def createFish(fish_dict):
     id = fish_dict["id"]

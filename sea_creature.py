@@ -15,7 +15,7 @@ class Sea_Creature:
     def __str__(self):
         result = ""
         result += "%s: \"%s\"\n" % (self.name["name-USen"], self.catch_phrase)
-        result += "Buy for %u\n" % self.price
+        result += "Sell for %u\n" % self.price
         result += "%s\n" % self.museum_phrase
         return result
 

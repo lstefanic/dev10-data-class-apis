@@ -10,7 +10,7 @@ class Fossil:
     def __str__(self):
         result = ""
         result += "%s\n" % self.name["name-USen"]
-        result += "Buy for %u\n" % self.price
+        result += "Sell for %u\n" % self.price
         result += "%s\n" % self.museum_phrase
         return result
 

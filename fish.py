@@ -15,7 +15,7 @@ class Fish:
     def __str__(self):
         result = ""
         result += "%s: \"%s\"\n" % (self.name["name-USen"], self.catch_phrase)
-        result += "Buy for %u, or buy from CJ for %u\n" % (self.price, self.price_cj)
+        result += "Sell for %u, or sell to CJ for %u\n" % (self.price, self.price_cj)
         result += "%s\n" % self.museum_phrase
         return result
 

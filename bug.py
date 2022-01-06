@@ -14,7 +14,7 @@ class Bugs:
     def __str__(self):
         result = ""
         result += "%s: \"%s\"\n" % (self.name["name-USen"], self.catch_phrase)
-        result += "Buy for %u, or buy from Flick for %u\n" % (self.price, self.price_flick)
+        result += "Sell for %u, or sell to Flick for %u\n" % (self.price, self.price_flick)
         result += "%s\n" % self.museum_phrase
         return result
 

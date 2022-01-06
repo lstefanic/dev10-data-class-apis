@@ -22,6 +22,11 @@ def createFish(fish_dict):
     museum_phrase = fish_dict["museum-phrase"]
     return Fish(id,name,availability,shadow,price,price_cj,catch_phrase,museum_phrase)
 
-response = requests.get("http://acnhapi.com/v1/fish/1")
+def createFishes(fishes_dict):
+    return map(createFish,list(fishes_dict.values()))
+
+response = requests.get("http://acnhapi.com/v1/fish")
 print(response.status_code)
-print(createFish(response.json()))
+fishes = createFishes(response.json())
+for fish in fishes:
+    print(fish)
